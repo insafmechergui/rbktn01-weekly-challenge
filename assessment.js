@@ -43,27 +43,38 @@ function daBears() {
 // Which function(s) access the "chair" variable and get "Too Big!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale1 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+//var fairyTale1 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale1 = ["papaBear"];
 
 // Which function(s) access the "feeling" variable and get "Hungry"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale2 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+//var fairyTale2 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale2 = ["goldilocks"];
 
 // Which function(s) access the "porridge" variable and get "Too Cold!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale3 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+//var fairyTale3 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale3 = ["mamaBear", ];
 
 // Which function(s) access the "sleepy" variable and get undefined
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale4 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+//var fairyTale4 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+//var fairyTale4 = ["daBears", "papaBear"];
+//var fairyTale4 = ["daBears", "papaBear", "mamaBear"];
+//var fairyTale4 = ["daBears", "goldilocks"];
+
+var fairyTale4 = ["papaBear"];
+var fairyTale4 = ["mamaBear"];
+var fairyTale4 = ["goldilocks"];
 
 // Which function(s) access the isFurry variable and get true
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+//var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale5 = ["daBears"];
 
 
 // *************
@@ -84,8 +95,21 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 // CODE HERE...
 
 
+var Vehicle = function() {
+	this.gasRemaining = 100;
+}
 
+//Vehicle.prototype.constructor = Vehicle;
 
+Vehicle.prototype.drive = function() {
+	return this.gasRemaining - 25
+}
+
+var charger = new Vehicle();
+charger.drive();
+var mustang = new Vehicle();
+var mustang2 = mustang.drive();
+mustang2.drive();
 
 // -----------------------------------------------------------------------------
 
@@ -109,6 +133,16 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
 // CODE HERE...
 
+var grammarPolice = function(string) {
+	string.toLowerCase();
+	var newString = string.split(' ');
+	for(var i = 0; i < newString.length; i++) {
+		if(newString[i].charAt(i) = " ") {
+		newString[i+1].toUpperCase();
+		}
+	}
+	return newString;
+}
 
 
 // *************
@@ -126,6 +160,18 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 // In all other cases, return "Different values"
 
 // CODE HERE...
+
+var valueType = function(arg1, arg2) {
+	if((typeof arg1 === typeof arg2) && (arg1 = arg2)) {
+		return "Exactly the same";
+	}
+	else if((arg1 = arg2) && (typeof arg1 !== typeof arg2)) {
+		return "Same value, different types";
+	}
+	else {
+		return "Different values";
+	}
+}
 
 // *************
 // * PROBLEM 5 *
@@ -152,6 +198,7 @@ function large() {
     return 'My name is ' + this.name + ' and I am very heavy!'
 }
   // CODE HERE...
+var boundToElephant = large.elephant.bind(this.large); 
 
 // *************
 // * PROBLEM 6 *
@@ -164,6 +211,15 @@ function large() {
 // and return the bound function.
 
 // CODE HERE...
+
+var deathStar = function(capacity, crew)  {
+	capacity = function() {
+		crew = {}
+	}
+}
+
+var boundFunction = deathStar.capacity.bind(deathStar);
+
 
 
 // *************
@@ -178,3 +234,9 @@ function large() {
 // The closure function will return the combined value of assets and liabilities.
 
 // CODE HERE...
+
+var accountingOffice = function(assets) {
+	function closur(liabilities) {
+		return assets + liabilities ;
+	}
+}
